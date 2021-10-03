@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/product_detail_screen.dart';
 import 'package:shop_app/screens/products_overview_screen.dart';
 
 void main() {
@@ -12,8 +13,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'DonArina Store',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.indigo,
+          accentColor: Colors.deepOrangeAccent,
+          fontFamily: 'Lato',
         ),
-        home: ProductsOverviewScreen());
+        home: ProductsOverviewScreen(),
+        routes: {
+          ProductDetailScreen.routeName:(ctx)=> ProductDetailScreen(),
+        },
+        );
   }
 }
